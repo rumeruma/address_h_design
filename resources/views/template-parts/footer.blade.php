@@ -1,4 +1,4 @@
-<!--<footer class="site-footer footer-map">
+<footer class="site-footer footer-map">
     <div class="footer-top">
         <div class="container">
             <div class="row">
