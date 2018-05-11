@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/faviconfinal.png') }}">
+
+    <!-- Style Sheets -->
+    <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/responsive_style.css') }}" type="text/css">
+
+    <!-- Google Fonts-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800%7CMontserrat:400,700'
+          rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Fucking CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('nasty-template') }}/rs-plugin/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('nasty-template') }}/css/rev-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/edit.css') }}" rel="stylesheet">
+    <style>
+        #preview {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        #preview-coverflow .cover {
+            cursor: pointer;
+            width: 320px;
+            height: 240px;
+            -webkit-box-shadow: 0px 0px 18px 3px rgba(97, 171, 255, 0.62);
+            -moz-box-shadow: 0px 0px 18px 3px rgba(97, 171, 255, 0.62);
+            box-shadow: 0px 0px 18px 3px rgba(97, 171, 255, 0.62);
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="vfx_loader_block">
+    <div class="vfx-loader-item"><img src="{{ asset('images/loading.gif') }}" alt=""/></div>
+</div>
+
+@include('template-parts/nav')
+@include('template-parts/slider')
+@include('template-parts/member-gold')
+@include('template-parts/categoryList')
+{{--@include('template-parts/member')--}}
+@include('template-parts/pricingblock')
+@include('template-parts/memberRecent')
+@include('template-parts/footer')
+
+
+
+@include('template-parts/authpop')
+<script type="text/javascript" src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/waypoints.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery_counterup.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery_custom.js') }}"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+{{--<script type="text/javascript" src="{{ asset('vendor/coverflow/jquery.coverflow.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('vendor/coverflow/jquery.interpolate.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('vendor/coverflow/jquery.touchSwipe.min.js') }}"></script>--}}
+{{--<script type="text/javascript" src="{{ asset('vendor/coverflow/reflection.js') }}"></script>--}}
+<script type="text/javascript" src="{{ asset('js/theme.js') }}"></script>
+@include('template-parts/motherfucking-scripts')
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+        $('.scrollup').click(function () {
+            $("html, body").animate({scrollTop: 0}, 600);
+            return false;
+        });
+
+
+        if ($.fn.reflect) {
+            $('#preview-coverflow .cover').reflect();	// only possible in very specific situations
+        }
+
+        // var cf = $('#preview-coverflow').coverflow({
+        //     index: 6,
+        //     density: 1,
+        //     innerOffset: 30,
+        //     innerScale: .7,
+        //     animateStep: function (event, cover, offset, isVisible, isMiddle, sin, cos) {
+        //         if (isVisible) {
+        //             if (isMiddle) {
+        //                 $(cover).css({
+        //                     'filter': 'none',
+        //                     '-webkit-filter': 'none'
+        //                 });
+        //             } else {
+        //                 var brightness = 1 + Math.abs(sin),
+        //                     contrast = 1 - Math.abs(sin),
+        //                     filter = 'contrast(' + contrast + ') brightness(' + brightness + ')';
+        //                 $(cover).css({
+        //                     'filter': filter,
+        //                     '-webkit-filter': filter
+        //                 });
+        //             }
+        //         }
+        //     }
+        // });
+
+        // cf.refresh();
+
+
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#submitContact').on('click', function () {
+            var name = $('#contact-nmae').val();
+            var email = $('#contact-email').val();
+            var message = $('#contact-message').val();
+            $.ajax({
+                method: "POST",
+                url: "{{ route('home.contact') }}",
+                data: {name: name, email: email, message: message},
+                success: function (data) {
+                    swal({
+                        title: "Sending Request",
+                        text: 'please wait',
+                        timer: 5000,
+                        onOpen: function () {
+                            swal.showLoading()
+                        }
+                    }).then(function (result) {
+                        if (result.dismiss === swal.DismissReason.timer) {
+
+                        }
+
+                        $('#contact-form-common').hide('slow');
+                        $('#contact-form-success').show('slow').html('<strong>Your Message Has Been Sent</strong>, {{ config('app.name') }} will reply you soon.');
+                    });
+                },
+                error: function (msg) {
+                    var errorMsg = "";
+                    if (msg.status === 422) {
+                        $.each(msg.responseJSON, function (key, value) {
+                            errorMsg += '<li class="text-danger">' + value + '</li>';
+                        });
+                        swal({
+                            type: 'error',
+                            title: 'Oops...',
+                            html: '<ol>' + errorMsg + '</ol>',
+                        });
+                    }
+                }
+            });
+        });
+    })
+
+
+</script>
+
+
+
+</body>
+</html>

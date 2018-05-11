@@ -1,0 +1,436 @@
+
+
+/* 
+    Created on : 29 Jan, 2015, 7:06:48 AM
+    Author     : Design_mylife
+    Purpose    : Revolution slider css
+    Version    : V2.5
+*/
+
+
+.fullwidthbanner{
+    width:100%;
+    position: relative;
+}
+.rev-text-center{
+    text-align: center;
+    font-size: 24px;
+    color:#fff !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400;
+   line-height: 30px;
+}
+.rev-title-v1{
+  font-family: 'Open Sans', sans-serif !important;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+.rev-buttons a{
+    color:#fff;
+    margin: 5px;
+}
+.rev-buttons .btn-theme-bg:hover{
+    color:#fff;
+}
+.rev-buttons .border-white:hover{
+    color:#333;
+}
+.tp-caption.modern_big_redbg{
+      font-family: 'Open Sans', sans-serif !important; 
+      font-weight: 300;
+}
+.slider-text-title{
+    font-size: 50px;
+    color:#fff;
+}
+.uppercase-title{
+    font-weight: 700;
+    font-size: 55px;
+    color:#fff;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+.lowercase-caption{
+    font-weight: 400;
+    font-size: 20px;
+    color:#fff;
+    line-height: 26px;
+    font-family: 'Open Sans', sans-serif;
+}
+/************box slider*******/
+.tp-banner-container{
+    position: relative;
+    max-width:1170px;
+    margin: 20px auto;
+}
+
+/************ken burns***************/
+
+.Ken-burns-heading{
+    font-size: 60px;
+    color:#fff;
+    font-weight:700;
+    text-transform: uppercase;
+      font-family: 'Open Sans', sans-serif!important; 
+}
+.ken-burns-cap{
+    color:#fff;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif ;
+}
+
+
+/***index page slider****/
+.caption.title-2 {
+color: #fff;
+font-size: 48px;
+line-height: 56px;
+font-weight: 900;
+text-transform: uppercase;
+ font-family: 'Raleway', sans-serif;
+}
+.caption.text{
+    font-size: 16px;
+    font-weight: 300;
+    color:#fff;
+     font-family: 'Open Sans', sans-serif;
+}
+.caption.title {
+color: #fff;
+font-size: 72px;
+line-height: 85px;
+font-weight: 700;
+text-transform: uppercase;
+font-family: 'Open Sans', sans-serif;
+}
+.caption.subtitle {
+padding-left: 25px;
+border-left: 3px solid #bbb;
+color: #fff;
+font-size: 24px;
+line-height: 33px;
+text-transform: uppercase;
+font-family: 'Open Sans', sans-serif;
+}
+.revo-slider-emphasis-text {
+font-size: 64px;
+font-weight: 700;
+letter-spacing: -1px;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.revo-slider-caps-text {
+font-size: 16px;
+font-weight: 400;
+letter-spacing: 3px;
+font-family: 'Open Sans', sans-serif;
+}
+
+/***shop slide****/
+.shop-slide-heading{
+    color:#fff;
+    font-size: 45px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+}
+.shop-slide-text{
+    color:#fff;
+}
+.shop-discount{
+    color:#fff;
+    width:80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background-color: #3498db;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    font-family: 'Open Sans', sans-serif;
+}
+.modern_big_bluebg{
+ font-family: 'Open Sans', sans-serif !important;  
+ text-transform: uppercase;
+}
+
+
+.text-center-top{
+       color:#fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: 'Raleway', sans-serif;
+}
+.text-center-btm{
+    color:#fff;
+    font-size: 20px;
+    font-weight: 300;
+    line-height:34px !important;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.left-tile-text{
+      color:#fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/****vertical slider****/
+.vertical-title{
+    color:#fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: 'Open Sans', sans-serif;
+}
+.vertical-caption{
+    color:#fff;
+    font-size: 20px;
+    font-weight: 300;
+     font-family: 'Open Sans', sans-serif;
+}
+.details-lt-block {
+    background: rgba(0, 0, 0, 0) url("../images/details-view.jpg") no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+    background-size: auto 100%;
+}
+.details-lt-block .slt_block_bg img {
+    width: 100%;
+    height: 520px;
+}
+.slt_block_bg img {
+    position: relative;
+    z-index: -1;
+}
+.slt_block_bg {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(16, 14, 13, 0) 0%, rgba(16, 14, 13, 1) 100%) repeat scroll 0 0;
+    transition: all 0.3s ease 0s;
+}
+.header_slt_block {
+    position: relative;
+}
+.slt_item_head {
+    bottom: 30px;
+    position: absolute;
+    width: 100%;
+    height: 330px;
+}
+.header_slt_block .user_logo_pic {
+    background: rgba(0, 0, 0, 0.15) linear-gradient(to bottom, rgba(16, 14, 13, 0.0) 0%, rgba(16, 14, 13, 0.8) 100%) repeat scroll 0 0;
+    height: 200px;
+    left: 0px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    top: 0px;
+    width: 200px;
+    float: left;
+}
+.header_slt_block .user_logo_pic img {
+    border-radius: 0px;
+    height: auto;
+    margin: 10;
+    width: 100%;
+}
+.slt_item_contant {
+    float: left;
+    left: 175px;
+    margin-bottom: 10px;
+    margin-left: 45px;
+    position: absolute;
+    margin-top: 25px;
+}
+.slt_item_head h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    font-size: 38px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    text-shadow:2px 2px #000000;
+}
+.slt_item_head .location {
+    color: #ffffff;
+    margin-right: 15px;
+    font-size:18px;
+    text-shadow:2px 2px #000000;
+}
+.slt_item_head .detail-banner-btn {
+    display: inline-block;
+    margin-right: 15px;
+}
+.slt_item_head .detail-banner-btn a {
+    background: transparent linear-gradient(to right, #ffffff 50%, #ffce10 50%) repeat scroll right bottom / 207% 100%;		
+    color: #01273a;
+    cursor: pointer;
+    padding: 9px 15px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    -webkit-transition: all .6s ease 0;
+    transition: all .6s ease 0;
+    transition: all 0.3s ease 0s;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.slt_item_head .detail-banner-btn a:hover {
+    background: transparent linear-gradient(to right, #ffffff 50%, #ffce10 50%) repeat scroll right bottom / 207% 100%;
+    background-position: left bottom;	
+    color: #01273a;
+    -webkit-transition: all .6s ease 0;
+    transition: all .6s ease 0;
+    transition: all 0.3s ease 0s;
+}
+.slt_item_head .detail-banner-btn a:hover i {
+    color: #323232;
+}
+.rating-box, .venue-action {
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-shadow:2px 2px #000000;
+    
+}
+.slt_item_head .detail-banner-btn {
+    color: #fff;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.slt_item_head .detail-banner-btn i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #01273a;
+}
+
+#slidelogo{
+    border:5px solid #000;
+}
+.text-right-top{
+    color:#ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height:24px !important;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow:2px 2px #000000;
+}
+.rating{
+    color:#ffffff;
+    font-size:16px;
+}
+
+@media (max-width:640px){
+    .details-lt-block .slt_block_bg img {
+        width: 50%;
+        height: 50%;
+    }
+    #slidelogo{
+    border:2px solid #000;
+}
+    .slt_block_bg{
+        width: 50%;
+        height: 50%;
+    }
+    .slt_item_head {
+        bottom: 30px;
+        position: absolute;
+        width: 90%;
+        height: 270px;
+    }
+    .slt_item_head {
+        bottom: 180px;
+        position: absolute;
+        width: 90%;
+    }
+    .slt_item_head h1 {
+        color:#FFFFFF;
+        font-family:"Open Sans", sans-serif;
+        font-size:38px;
+        margin-bottom:10px;
+        margin-top:170px;
+        width:100%;
+        float: left;
+
+    }
+    .slt_item_contant {
+        float: left;
+        left: 0px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        position: absolute;
+        text-shadow:1px 1px 2px #000000;
+
+    }
+    .text-center-top a{
+        color:#ffffff;
+        text-transform: uppercase; 
+        font-size: 24px;
+        font-family: 'Raleway', sans-serif;
+        text-shadow:2px 2px #000000;
+        margin-left: 80px;
+
+    }
+    .text-center-btm a{
+        color:#ffffff;
+        font-size: 14px;
+        line-height:34px !important;
+        font-family: 'Open Sans', sans-serif;
+        text-shadow:2px 2px #000000;
+        margin-left: 80px;
+
+    }
+    .left-tile-text a{
+        color:#fff;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+        margin-left: 80px;
+    }
+  #footer {
+  background: #111;
+  font-size: 16px;
+  text-align: center;
+  padding: 25px;
+  color:#ffffff;
+  
+
+
+}
+}
+@media (min-width:768px)and (max-width:1024px){
+    .text-center-top a{
+        color:#ffffff;
+        text-transform: uppercase; 
+        font-size: 45px;
+        font-family: 'Raleway', sans-serif;
+        text-shadow:2px 2px #000000;
+        margin-left: 110px;
+
+    }
+    .text-center-btm a{
+        color:#ffffff;
+        font-size: 30px;
+        line-height:24px !important;
+        font-family: 'Open Sans', sans-serif;
+        text-shadow:2px 2px #000000;
+        margin-left: 110px;
+
+    }
+    .left-tile-text a{
+        color:#fff;
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-family: 'Raleway', sans-serif;
+        margin-left: 110px;
+        line-height:24px !important;
+    }
+}
+
